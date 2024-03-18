@@ -1,11 +1,3 @@
--- Common VIM Config
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set number")
-vim.g.mapleader = " "
-
 -- Package Installer 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -22,5 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
 require("lazy").setup("plugins")
+require("vim-options")
 
 
